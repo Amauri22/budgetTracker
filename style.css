@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+}
+
+.main-class {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 50px 50px 50px 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+/* HOOFD CONTAINER */
+.container {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+/*Container van het overzicht*/
+.overview--container {
+    display: flex;
+    border: 3px solid black;
+    width: 50%;
+    height: 600px;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(250, 180, 110, 0.1);
+}
+
+/*Child container van overzicht*/
+.movements-ce {
+    border: 1px solid black;
+    height: 500px;
+    width: 80%;
+    background-color: gray;
+
+}
+
+/* KOSTEN INKOMSTEN CONTAINER */
+.overview-costs-income-saldo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 30%;
+    text-align: right;
+
+
+}
+
+.cost-container, .income-container, .saldo-container {
+    padding: 30px;
+    border: 1px solid black;
+    height: 20%;
+
+}
+/* kosten container */
+
+
+
+
