@@ -51,7 +51,6 @@ h2 {
     justify-content: space-evenly;
     width: 30%;
     text-align: right;
-    align-items: fl;
 
 
 }
@@ -61,6 +60,7 @@ h2 {
     border: 1px solid black;
     height: 20%;
 }
+
 /* kosten container */
 .total-incomes, .total-costs, .total-saldo {
     border: 1px solid black;
