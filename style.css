@@ -1,80 +1,109 @@
+:root {
+    --light-Green: #79ffcc;
+    --dark-blue-background: #081027;
+    --blue-background: #183073;
+    --pink: #fb5f90;
+    --white-gray: #dce1e9
+}
+
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/***General styling***/
+.btn {
+    padding: 2px 5px;
+}
+
+/*CLASSES FOR HIDING*/
+
+
+/*BODY ALROUND*/
 body {
-    max-width: 1080px;
+    background-color: var(--dark-blue-background);
+    font-family: 'Poppins', sans-serif;
+    color: #dce1e9;
+    max-width: 90vw;
     margin: 0 auto;
-    background: radial-gradient(#ccffe2, #7cfdb4);
-    font-family: 'Roboto', sans-serif;
 }
 
-/*HEADER */
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
 
-.login-bar {
+h3 {
+    font-size: 3em;
+}
+
+ul {
+    list-style: none;
+}
+
+/***********************LOGIN**************************/
+.login-screen{
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
-    background: radial-gradient(#7cfdb4, #006537 );
-    box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
-    10px 10px 15px rgba(70,70,70,0.12);
-    padding: 1rem;
-    border-radius: 10px;
-    margin-top: 3rem;
-
-}
-
-.login-bar h1 {color: white;
-}
-
-.login-bar ul li {
-    display: inline-block;
-    margin: 5px 10px;
-
-
-}
-
-#submit {
-    padding: 10px 20px;
-    background: linear-gradient(#7cfdb4, #ccffe2);
-    border-radius: 10px;
-    box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
-    10px 15px 15px rgba(70,70,70,0.12);
-    border: none;
-    color: white;
-
-}
-
-/*OVERVIEW*/
-.main-container {
-    background: linear-gradient(#6BD60C, #A2E962);
-    box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
-    10px 10px 15px rgba(70,70,70,0.12);
-    padding: 1rem;
-    border-radius: 10px;
-    margin-top: 3rem;
-    display: flex;
-    justify-content: space-around ;
+    justify-content: center;
+    align-items: center;
 }
 
 
-
-.col {
+fieldset {
+    padding: 3em;
     display: flex;
     flex-direction: column;
-    flex-basis: 25%;
-    background: linear-gradient(#7cfdb4, #ccffe2);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.hidden {
+    display: none;
+
+}
+
+/**************************** HEADER *****************/
+/*----------HEADER------------*/
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
     gap: 20px;
 }
 
-.balances {
-    text-align: right;
+.totals-field {
+    flex-basis: 15%;
+    font-size: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-background);
+    padding: 10px 10px;
+    border-radius: 10px;
+    flex-direction: column;
 }
 
-.movements-list {
-    list-style: none;
+.totals-field-month {
+    flex-grow: 1;
+    margin-right: 10px;
 }
+
+#total-balance, #total-income {
+    color: var(--light-Green);
+}
+
+#total-expense {
+    color: var(--pink)
+}
+
+/*************** OVERVIEW MOVEMENTS **************/
+#overview {
+    background-color: #183073;
+    padding: 20px;
+    border-radius: 10px;
+}
+

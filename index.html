@@ -1,35 +1,93 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
 	      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
-	<title>GridStyle</title>
+	<title>BudgetTracker 0.2</title>
 </head>
 <body>
-<header>
-	<h1>Budget Tracker</h1>
-</header>
+<!-- ****LOGIN SCREEN **** -->
+<section class="login-screen hidden">
+	<div class="login-container">
+		<h1>BudgetSimple</h1>
+		<form id="login-form">
+			<fieldset>
+				<legend>Login</legend>
 
-<main>
-	<section id="welcome-page">
-		<h1>Welcome</h1>
-		<div class="container">
-			<div class="login-bar">
-				<h1>Welcome</h1>
-				<ul>
-					<li><input type="text" placeholder="name" required></li>
-					<li><input type="password" placeholder="password" required></li>
-					<li>
-						<button type="submit" id="submit">login</button>
-					</li>
-				</ul>
-			</div>
+				<div class="username-input">
+					<label for="username">Username</label>
+					<input type="text" id="username" placeholder="username">
+				</div>
+
+				<div class="password-input">
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password">
+				</div>
+				<button class="btn login-btn" id="login-btn">Login</button>
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<!-- *****************************MAIN****************************** -->
+<!-- HEADER  -->
+<section id="totals-header">
+	<div class="main-container">
+		<div class="totals-field totals-field-month">
+			<h3>January</h3>
 		</div>
-	</section>
+		<div class="totals-field totals-field-income">
+			<h2>Total Income</h2>
+			<h3 data-tab="income" id="total-income">0</h3>
+		</div>
+		<div class="totals-field totals-field-expense">
+			<h2>Total Expense</h2>
+			<h3 data-tab="expense" id="total-expense">0</h3>
+		</div>
+		<div class="totals-field totals-field-balance">
+			<h2>Total Balance</h2>
+			<h3 data-tab="balance" id="total-balance">0</h3>
+		</div>
+		<div class="totals-field totals-field-budget">
+			<h2>Remaining Budget</h2>
+			<h3 data-tab="budget" id="total-budget">0</h3>
+		</div>
+	</div>
+</section>
 
+<section id="input-fields">
+	<div class="main-container">
+		<div class="input-container input-income">
+			<label for="income-input-field">Income</label>
+			<input type="text" id="income-input-field" placeholder="income">
+			<button class="btn income-btn" data-add-btn="income" id="income-btn">add</button>
+		</div>
+		<div class="input-container input-expense">
+			<label for="expense-input-field">expense</label>
+			<input type="text" id="expense-input-field" placeholder="expense">
+			<button class="btn expense-btn" data-add-btn="expense" id="expense-btn">add</button>
+		</div>
+	</div>
 
-<script src="app.js"></script>
+</section>
+
+<section id="overview">
+	<div class="main-container">
+		<div class="overview-container overview-movements overview-active">
+			<h2>Movements</h2>
+			<ul class="overview-movements overview-movements-list">
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<script src="indexapp.js"></script>
 </body>
 </html>
