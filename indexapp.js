@@ -7,6 +7,20 @@ const loginBtn = document.getElementById("login-btn");
 const totalIncome = document.getElementById("total-income");
 const totalExpense = document.getElementById("total-expense");
 const totalBalanceElement = document.getElementById("total-balance");
+const totalsHeaderContainer = document.getElementById("totals-header");
+const overViewContainer = document.querySelectorAll(".overview-container")
+
+totalsHeaderContainer.addEventListener("click", function (e) {
+    const clicked = e.target.closest(".totals-field")
+    if(!clicked) return
+    
+    overViewContainer.forEach(con => con.classList.add("hidden"));
+    const id = clicked.dataset.tab;
+    console.log(id)
+    
+    
+    
+})
 
 
 /*** INPUTS ***/
@@ -121,7 +135,6 @@ inputFieldsContainer.addEventListener("click", function (e) {
         marlon.calcTotalIncome(totalIncome);
         marlon.calcTotalExpense(totalExpense)
     }
-    .
 })
 
 
