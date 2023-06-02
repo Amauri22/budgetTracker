@@ -121,7 +121,7 @@ inputFieldsContainer.addEventListener("click", function (e) {
         marlon.calcTotalIncome(totalIncome);
         marlon.calcTotalExpense(totalExpense)
     }
-    
+    .
 })
 
 
