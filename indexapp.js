@@ -8,6 +8,7 @@ const totalIncome = document.getElementById("total-income");
 const totalExpense = document.getElementById("total-expense");
 const totalBalanceElement = document.getElementById("total-balance");
 
+
 /*** INPUTS ***/
 const inputFieldsContainer = document.getElementById("input-fields")
 const inputIncome = document.getElementById("income-input-field");
@@ -29,6 +30,8 @@ class User {
         this.positiveMovements = [];
         this.negativeMovements = [];
         this.totalBalance = 0;
+        this.totalIncome = 0;
+        this.totalExpense = 0;
 
     }
 
@@ -64,6 +67,16 @@ class User {
     // The totalbalance gets displayed on site
     displayBalances(el){
         el.textContent = this.totalBalance;
+    }
+
+    calcTotalIncome(el){
+        this.totalIncome = this.positiveMovements.reduce((acc, val) => acc + val);
+        el.textContent = this.totalIncome;
+    }
+    
+    calcTotalExpense(el){
+        this.totalExpense = this.negativeMovements.reduce((acc, val) => acc + val);
+        el.textContent = this.totalExpense;
     }
     
     
@@ -104,9 +117,9 @@ inputFieldsContainer.addEventListener("click", function (e) {
         marlon.addMovement(amount);
         inputField.value = ""
         marlon.calcTotalBudget();
-        console.log(marlon)
-        console.log(marlon.totalBalance)
         marlon.displayBalances(totalBalanceElement)
+        marlon.calcTotalIncome(totalIncome);
+        marlon.calcTotalExpense(totalExpense)
     }
     
 })
